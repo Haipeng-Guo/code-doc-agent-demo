@@ -1,0 +1,13 @@
+
+
+
+```yaml
+scan:
+  extensions: [".py", ".js", ".ts", ".java", ".go"]
+  exclude_dirs: ["__pycache__", "node_modules", ".git"]
+
+agents:
+  code_analyzer:
+    prompt_template: "You are a code analyzer. Describe the purpose, inputs, outputs of this code:\n\n{code}"
+  doc_writer:
+    prompt_template: "You are a technical writer. Generate a Markdown documentation section for the following analysis:\n\n{analysis}"
